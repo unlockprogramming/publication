@@ -47,4 +47,3 @@ Please make sure you've change the `baseURL` on `/config/production/config.toml`
 
 ## Theme Credit Goes To
 - https://github.com/razonyang/hugo-theme-bootstrap
-
