@@ -1,0 +1,19 @@
+name = "Bhuwan Prasad Upadhyay"
+# avatar = "images/profile.png" # Avatar image. Default to "images/profile.webp".
+bio = "CS Researcher & Ploygot Software Engineer"
+#company = 'Unlock Programming'
+company = '<a href="https://unlockprogramming.com" target="_blank" rel="noopener noreferrer">Unlock Programming</a>'
+location = "United States"
+# alternatives:
+# location = "<a href='https://www.openstreetmap.org/search?query=Earth'>Earth</a>"
+# location = "<a href='https://www.google.com/maps/search/Earth'>Earth</a>"
+# about = "https://domain.tld" # The external about page. The internal about page will be used if not set.
+
+[params]
+  #layout = "compact"
+
+[social]
+  email = "bhuwan.upadhyay49@gmail.com"
+  facebook = "developerbhuwan"
+  github = "bhuwanupadhyay"
+  twitter = "IAmVuwan"
