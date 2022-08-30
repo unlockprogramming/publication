@@ -1,0 +1,5 @@
+main:
+  - identifier: blog
+    name: Blog
+    pre: <i class="fas fa-fw fa-blog me-1"></i>
+    weight: 2
