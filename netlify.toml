@@ -1,5 +1,6 @@
 [build]
 publish = "public"
+command = "npm install && HUGO_BASEURL=$URL hugo"
 
 [build.environment]
 NODE_VERSION = "17.6.0"
@@ -7,14 +8,19 @@ HUGO_VERSION = "0.93.0"
 HUGO_ENABLEGITINFO = "true"
 GO_VERSION = "1.17.7"
 
-[context.production]
-command = "npm install && hugo --minify"
+[context.deploy-preview]
+command = "npm install && HUGO_BASEURL=$DEPLOY_PRIME_URL hugo --minify"
 
-[context.production.environment]
+[context.deploy-preview.environment]
+HUGO_GOOGLEANALYTICS = "dev"
 HUGO_ENV = "development"
 
-[context.production-preview]
-command = "npm install && hugo --minify"
+[context.branch-deploy]
+command = "npm install && HUGO_BASEURL=$DEPLOY_PRIME_URL hugo --buildDrafts"
+
+[context.branch-deploy.environment]
+HUGO_GOOGLEANALYTICS = "dev"
+HUGO_ENV = "development"
 
 [[headers]]
   for = "/*"
