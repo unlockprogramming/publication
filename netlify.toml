@@ -1,6 +1,6 @@
 [build]
 publish = "public"
-command = "HUGO_BASEURL=$URL hugo"
+command = "npm install && HUGO_BASEURL=$URL hugo"
 
 [build.environment]
 NODE_VERSION = "17.6.0"
