@@ -25,6 +25,20 @@ site_dev: ## Site Development
 site_build: ## Site Build
 	HUGO_ENVIRONMENT=production hugo --minify --destination ./public
 
+site_clean:
+	rm -rf public/
+
+##@ Docker
+
+build_docker:
+	docker-compose build
+
+start_docker: build_docker
+	docker-compose up -d
+
+remove_docker:
+	docker-compose down --rmi all -v --remove-orphans
+
 ##@ Infra
 
 infra_deploy: ## Infra Deploy
