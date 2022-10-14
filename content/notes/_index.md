@@ -1,5 +1,5 @@
 ---
-title: Notes
+title: "Notes"
 menu:
   main:
     weight: 5

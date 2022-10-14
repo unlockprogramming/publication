@@ -19,7 +19,7 @@ site_update: ## Site Update
 	hugo mod get -u && \
 	hugo mod npm pack && $(MAKE) install
 
-site_dev: ## Site Development
+site_dev: site_clean ## Site Development
 	hugo server --buildDrafts --buildFuture --watch
 
 site_build: ## Site Build

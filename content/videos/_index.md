@@ -1,5 +1,5 @@
 ---
-title: Podcasts
+title: "Videos"
 menu:
   main:
     weight: 2
