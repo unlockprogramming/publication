@@ -1,5 +1,5 @@
 ---
-title: "Videos"
+title: "Series"
 menu:
   main:
     weight: 2
