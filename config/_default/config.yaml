@@ -1,7 +1,7 @@
-baseURL: http://localhost:1313/
+baseURL: /
 title: Unlock Programming
 theme: github.com/razonyang/hugo-theme-bootstrap
-copyright: 'Copyright © 2016-{year} Unlock Programming. All Rights Reserved.'
+copyright: 'Copyright © {year} Unlock Programming. All Rights Reserved.'
 defaultContentLanguage: en
 # hasCJKLanguage: true # Uncomment it if your content contains Chinese/Japanese/Korean Languages.
 # defaultContentLanguageInSubdir: true
