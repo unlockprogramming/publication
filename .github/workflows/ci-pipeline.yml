@@ -1,0 +1,35 @@
+name: '[CI/CD] CI Pipeline'
+
+on: # rebuild any PRs and main branch changes
+  pull_request_target:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - labeled
+    branches:
+      - main
+      - unlockprogramming:main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '17'
+      - uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.97.3'
+          extended: true
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.17.7'
+      - run: npm install
+      - run: HUGO_ENVIRONMENT=production hugo --minify --buildDrafts --buildFuture --destination ./public
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          force_orphan: true

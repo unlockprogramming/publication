@@ -27,6 +27,7 @@ site_build: ## Site Build
 
 site_clean:
 	rm -rf public/
+	rm -rf resources/
 
 ##@ Docker
 
@@ -62,4 +63,4 @@ clean:
 
 ##@ Releases
 
-release: site_build sync_s3 sync_cloudfront clean
+release: sync_s3 sync_cloudfront clean
