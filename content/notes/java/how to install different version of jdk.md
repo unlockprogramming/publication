@@ -1,7 +1,7 @@
 ---
 title: "How to install different version of jdk"
 date: "2022-09-23"
-draft: true
+draft: false
 authors: bhuwanupadhyay
 categories:
 - Java

@@ -1,0 +1,50 @@
+name: '[Production] CD Pipeline'
+on: # rebuild any PRs and main branch changes
+  push:
+    branches:
+      - main
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '17'
+      - uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.97.3'
+          extended: true
+      - uses: actions/setup-go@v3
+        with:
+          go-version: '1.17.7'
+      - uses: hashicorp/setup-terraform@v2
+
+      - name: Cache node modules
+        id: cache-npm
+        uses: actions/cache@v3
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
+        name: List the state of node modules
+        continue-on-error: true
+        run: npm list
+
+      - run: npm install
+      - run: HUGO_ENVIRONMENT=production hugo --minify --destination ./public
+      - run: make release
+        env:
+          AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION=${{ secrets.AWS_REGION }}
+          TF_VAR_acm_cert_arn=${{ secrets.AWS_ACM_CERT_ARN }}
+          CLOUD_FRONT_ID1=${{ secrets.CLOUD_FRONT_ID1 }}
+          CLOUD_FRONT_ID2=${{ secrets.CLOUD_FRONT_ID2 }}

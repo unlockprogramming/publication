@@ -1,14 +1,10 @@
 ---
 title: "Amazon Simple Email Service (SES) Configuration"
-date: 2022-05-21
+date: "2022-05-21"
 draft: false
-authors:
-- bhuwanupadhyay
+authors: bhuwanupadhyay
 categories:
 - AWS
-tags:
-- SES
-- SMTP
 ---
 
 In this note, we will explore how to set up Amazon SES to send an email.
