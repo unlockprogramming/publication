@@ -1,4 +1,4 @@
-name: '[Development] CI Pipeline'
+name: 'Build'
 
 on: [pull_request]
 
