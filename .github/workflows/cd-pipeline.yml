@@ -42,9 +42,9 @@ jobs:
       - run: HUGO_ENVIRONMENT=production hugo --minify --destination ./public
       - run: make release
         env:
-          AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION=${{ secrets.AWS_REGION }}
-          TF_VAR_acm_cert_arn=${{ secrets.AWS_ACM_CERT_ARN }}
-          CLOUD_FRONT_ID1=${{ secrets.CLOUD_FRONT_ID1 }}
-          CLOUD_FRONT_ID2=${{ secrets.CLOUD_FRONT_ID2 }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+          TF_VAR_acm_cert_arn: ${{ secrets.AWS_ACM_CERT_ARN }}
+          CLOUD_FRONT_ID1: ${{ secrets.CLOUD_FRONT_ID1 }}
+          CLOUD_FRONT_ID2: ${{ secrets.CLOUD_FRONT_ID2 }}
