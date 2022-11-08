@@ -1,15 +1,6 @@
 name: '[CI/CD] CI Pipeline'
 
-on: # rebuild any PRs and main branch changes
-  pull_request_target:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - labeled
-    branches:
-      - main
-      - unlockprogramming:main
+on: [pull_request]
 
 jobs:
   ci:
