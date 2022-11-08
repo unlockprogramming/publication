@@ -1,4 +1,4 @@
-name: '[CI/CD] CI Pipeline'
+name: '[Development] CD Pipeline'
 
 on: [pull_request]
 

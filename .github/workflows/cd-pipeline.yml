@@ -1,4 +1,4 @@
-name: '[CI/CD] CD Pipeline'
+name: '[Production] CD Pipeline'
 on: # rebuild any PRs and main branch changes
   push:
     branches:
