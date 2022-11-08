@@ -63,4 +63,4 @@ clean:
 
 ##@ Releases
 
-release: sync_s3 sync_cloudfront clean
+release: site_build sync_s3 sync_cloudfront clean
