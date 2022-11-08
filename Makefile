@@ -17,10 +17,10 @@ site_install: ## Site Install
 
 site_update: ## Site Update
 	hugo mod get -u && \
-	hugo mod npm pack && $(MAKE) install
+	hugo mod npm pack && $(MAKE) site_install
 
 site_dev: site_clean ## Site Development
-	hugo server --buildDrafts --buildFuture --watch
+	HUGO_ENVIRONMENT=development hugo server --buildDrafts --buildFuture --watch
 
 site_build: ## Site Build
 	HUGO_ENVIRONMENT=production hugo --minify --destination ./public
