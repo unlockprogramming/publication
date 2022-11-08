@@ -2,7 +2,7 @@ name: '[Production] CD Pipeline'
 on: # rebuild any PRs and main branch changes
   push:
     branches:
-      - main
+      - unlockprogamming:main
 jobs:
   release:
     runs-on: ubuntu-latest

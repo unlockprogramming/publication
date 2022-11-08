@@ -10,7 +10,12 @@ assert_value() {
   fi
 
 }
-source $PWD/.aws_env
+
+FILE="$PWD/.aws_env"
+if test -f "$FILE"; then
+    echo "$FILE exists."
+    source "$FILE"
+fi
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TERRAFORM_S3_BUCKET=${TERRAFORM_S3_BUCKET:-terraform-unlockprogramming-com}
