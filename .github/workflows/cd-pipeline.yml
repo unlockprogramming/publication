@@ -27,7 +27,7 @@ jobs:
     name: S3 Publish
     steps:
       - uses: hashicorp/setup-terraform@v2
-        name: Publish on https://unlockprogramming.com
+      - name: Publish on https://unlockprogramming.com
         run: make release
         env:
           AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}
