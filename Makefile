@@ -23,6 +23,9 @@ site_dev: site_clean ## Site Development
 	HUGO_ENVIRONMENT=development hugo server --buildDrafts --buildFuture --watch
 
 site_build: ## Site Build
+	HUGO_ENVIRONMENT=development hugo --minify --buildDrafts --buildFuture --destination ./public
+
+site_release: ## Site Release
 	HUGO_ENVIRONMENT=production hugo --minify --destination ./public
 
 site_clean:
@@ -56,11 +59,6 @@ sync_s3:
 sync_cloudfront:
 	./infra/terraform.sh --sync-cloudfront
 
-##@ Cleanup
-
-clean:
-	rm -rf ./public/
-
 ##@ Releases
 
-release: site_build sync_s3 sync_cloudfront clean
+release: site_release sync_s3 sync_cloudfront site_clean
