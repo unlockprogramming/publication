@@ -38,6 +38,11 @@ make install
 
 ```bash
 vi ~/.bashrc
+```
+
+* Restart shell
+
+```bash
 exec "$SHELL"
 ```
 
