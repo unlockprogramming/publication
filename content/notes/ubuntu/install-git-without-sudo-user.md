@@ -32,7 +32,9 @@ make install
 ./git --version
 ```
 
-## Update the PATH variable `export PATH=$PATH:$HOME/git/git-2.9.4/`
+## Update the PATH variable 
+
+`export PATH=$PATH:$HOME/git/git-2.9.4/`
 
 ```bash
 vi ~/.bashrc
