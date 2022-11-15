@@ -33,4 +33,9 @@ jobs:
             ${{ runner.os }}-
 
       - run: npm install
-      - run: HUGO_ENVIRONMENT=development hugo --minify --buildDrafts --buildFuture --destination ./public
+      - run: make site_build
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          force_orphan: true
