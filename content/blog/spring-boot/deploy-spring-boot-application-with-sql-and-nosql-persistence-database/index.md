@@ -3,15 +3,12 @@ title: "Support SQL And NoSQL Database In Spring Boot Application"
 date: "2022-11-11"
 authors: "sujitsharma"
 categories:
-- Java
+- Spring Boot
 tags:
-- database
 - sql
-- postgres
 - nosql
+- postgres
 - mongodb
-- spring-boot
-- multiple database
 ---
 
 In this article, we are going to learn how to connect sql and nosql database in a spring boot application. This article shows database connections with postgres and mongodb in a single Spring project.
