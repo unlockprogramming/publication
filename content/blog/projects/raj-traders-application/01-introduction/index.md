@@ -12,7 +12,8 @@ tags:
 - fullstack
 ---
 
-This real world project walk-through complete steps to develop fullstack applications for orders and sales related business. 
+This real world project walk-through complete steps to develop fullstack applications for orders and sales related
+business.
 In order to develop this project we will use variety of technologies that are required.
 
 <!--more-->
@@ -40,9 +41,12 @@ In order to develop this project we will use variety of technologies that are re
 
 ![TP](thouht-process.png)
 
-
 ## Architecture Diagram
 
 Skip...
 
 ## Next Part
+
+In next [Getting Started]({{< ref "/blog/projects/raj-traders-application/02-getting-started" >}}) part we will discuss how to
+set up the project.
+
