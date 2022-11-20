@@ -47,6 +47,6 @@ Skip...
 
 ## Next Part
 
-In next [Getting Started]({{< ref "/blog/projects/raj-traders-application/02-getting-started" >}}) part we will discuss how to
+In next part on [Getting Started]({{< ref "/projects/raj-traders-application/02-getting-started" >}}) we will discuss how to
 set up the project.
 
