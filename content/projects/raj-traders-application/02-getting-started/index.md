@@ -33,7 +33,37 @@ docker run -it --rm --name rta-postgres -p 5455:5432 -e POSTGRES_PASSWORD=rtapos
 
 ## Connect with PostgreSQL
 
-## Create Webpage Controller
+You need to add the configuration in your `application.properties` with the following settings.
+
+```properties
+#--------------------- DB Connection Properties ------------------
+spring.datasource.url=jdbc:postgresql://localhost:5455/postgres
+spring.datasource.username=postgres
+spring.datasource.password=rtapostgrespw
+
+#--------------------JPA-HIBERNATE-ORM Properties-----------------
+spring.jpa.show-sql=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.format_sql=true
+```
+
+## Create Index Controller
+
+
+
+```java
+@Controller
+public class IndexController {
+
+    @GetMapping("/")
+    public String index(@RequestParam(name = "name", required = false, defaultValue = "World") String name, Model model) {
+        model.addAttribute("yourName", name);
+        return "index";
+    }
+
+}
+```
 
 ## Run Application
 
