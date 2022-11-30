@@ -1,5 +1,5 @@
 ---
-title: "Methods of creating singleton pattern in Java"
+title: "Methods of creating singleton pattern In Java"
 date: "2022-09-11"
 authors: "sujitsharma"
 categories:
@@ -223,7 +223,7 @@ public enum EnumSingletonRectangle {
 
 ## Source code
 
-The complete source code  of different singleton pattern described above along with their unit tests are available on github [Methods of Creating Singleton pattern](https://github.com/unlockprogramming/methods-of-creating-singleton-pattern-in-java/tree/singleton-creation-method)
+The complete source code  of different singleton pattern described above along with their unit tests are available on github [Methods of Creating Singleton pattern](https://github.com/unlockprogramming/methods-of-creating-singleton-pattern-in-java)
 
 ## Reference
 
