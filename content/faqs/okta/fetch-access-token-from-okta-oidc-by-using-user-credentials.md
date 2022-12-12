@@ -1,5 +1,5 @@
 ---
-title: "Fetch Access Token from Okta OICD app with user credentials using unix commands"
+title: "Fetch access token from Okta OICD by using user credentials"
 date: "2022-12-12"
 draft: false
 authors: bhuwanupadhyay
