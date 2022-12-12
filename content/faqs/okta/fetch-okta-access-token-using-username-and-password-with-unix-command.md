@@ -24,11 +24,11 @@ First, we need to okta oidc web app in Okta Dashboard.
 
 ```bash
 echo "1. Getting authentication session token"
-export OKTA_DOMAIN="dev-3716300.okta.com"
-export OKTA_USERNAME='bhuwan.upadhyay49@gmail.com'
-export OKTA_PASSWORD="P@ssw0rd"
-export OKTA_CLIENT_ID="0oa7lhbovnO7niFME5d7"
-export OKTA_CLIENT_SECRET="H4IC6tyuoE6xrl-44kGm_ftlxGIlKqWTjU3xQS0A"
+export OKTA_DOMAIN="dev-xyz.okta.com"
+export OKTA_USERNAME='youremail@gmail.com'
+export OKTA_PASSWORD="yourpassword"
+export OKTA_CLIENT_ID="<app_client_id>"
+export OKTA_CLIENT_SECRET="<app_client_secret>"
 export REDIRECT_URL=http://localhost:8080/authorization-code/callback
 
 ```
