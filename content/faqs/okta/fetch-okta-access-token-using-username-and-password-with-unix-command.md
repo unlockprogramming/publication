@@ -23,7 +23,7 @@ First, we need to okta oidc web app in Okta Dashboard.
 ## Setup environment variables
 
 ```bash
-echo "1. Getting authentication session token"
+echo "1. Setting environment variables"
 export OKTA_DOMAIN="dev-xyz.okta.com"
 export OKTA_USERNAME='youremail@gmail.com'
 export OKTA_PASSWORD="yourpassword"
