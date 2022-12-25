@@ -79,7 +79,7 @@ case ${option} in
   cd "$TF_DIR" && terraform destroy -auto-approve -refresh=false
   ;;
 --sync-s3)
-  aws s3 sync ./public/ s3://www.unlockprogramming.com
+  aws --no-progress --delete s3 sync ./public/ s3://www.unlockprogramming.com
   ;;
 --sync-cloudfront)
   aws cloudfront create-invalidation --distribution-id "$CLOUD_FRONT_ID1" --paths "/*" | jq '.'
