@@ -6,7 +6,7 @@
 
 ---
 
-This repository contains unlockprogramming.com blog contents.
+This repository contains [unlockprogramming.com](https://unlockprogramming.com) blog contents.
 
 ## Prerequisites Setup
 
@@ -16,6 +16,7 @@ This repository contains unlockprogramming.com blog contents.
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 nvm version
 nvm install v17.6.0
+nvm use v17.6.0
 ```
 
 * Install `go`
