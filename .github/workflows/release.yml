@@ -7,6 +7,8 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read  # <--- allows to read repo
     steps:
       - uses: actions/checkout@v3
         with:
