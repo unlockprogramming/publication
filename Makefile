@@ -13,11 +13,10 @@ help:
 ##@ Development
 
 site_install: ## Site Install
-	rm -rf ./node_modules/ && npm install
+	hugo mod npm pack && npm install
 
 site_update: ## Site Update
-	hugo mod get -u && \
-	hugo mod npm pack && $(MAKE) site_install
+	hugo mod get -u && $(MAKE) site_install
 
 site_dev: site_clean ## Site Development
 	HUGO_ENVIRONMENT=development hugo server --buildDrafts --buildFuture --watch
