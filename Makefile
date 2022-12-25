@@ -61,4 +61,4 @@ sync_cloudfront:
 
 ##@ Releases
 
-release: site_release sync_s3 sync_cloudfront site_clean
+release: site_clean site_release sync_s3 sync_cloudfront site_clean
