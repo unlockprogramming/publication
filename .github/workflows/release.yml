@@ -37,7 +37,6 @@ jobs:
             ${{ runner.os }}-
 
       - run: |-
-          npm config set legacy-peer-deps true
           npm install
       - run: make release
         env:
