@@ -2,7 +2,7 @@
 title: "Basic Java: Java Fundamentals"
 date: 2022-12-25
 draft: true
-authors: ["satyarajawasthi"]
+authors: ["SatyaRajAwasth1"]
 categories: ["Basic Java"]
 tags: []
 ---
