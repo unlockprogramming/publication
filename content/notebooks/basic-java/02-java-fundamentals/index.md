@@ -62,4 +62,7 @@ Our project will look like : ![project home view](https://user-images.githubuser
     + All the java source code files are kept inside the src folder.
 > The Main class and main method is automatically generated due we selected Add sample code option while creating the project.
 Dont worry we will be discussing about all the other stuffs there in our comming tutorials.
++ Replace " Hello world " on above code by " Lets, unlock java"
++ To run the code just press **ctrl+shift+f10**  or click on play button by selecting the configurations and class. (Be sure you are running the class with main method as execution of every program always start from main method.) 
++ Output for the above code: ![hello world output](https://user-images.githubusercontent.com/77236280/210138759-afc2a889-5562-4e9f-8cc1-7c4b966cd7be.png)
 <!--more-->
