@@ -23,12 +23,43 @@ This will print a line **Lets unlock java** on the console when the program is c
 
 The above was just a warmup lets start running. 
 ### **Editing, Compiling and executing java program**
-    its easy to do all. Just follow these steps:
+   its easy to do all. Just follow these steps:
 ![image](https://user-images.githubusercontent.com/77236280/210098519-9adc4d32-a000-42a9-b840-ce72c6dc8980.png)
 
-You have learned to setup ***jdk*** and ***IDE*** ( IntellijIdea in our case).
+> Be sure that the extension for the java code file should be .java and file name is as same as class name.
+#### **Comments in java**
+Single line comment: ``` // This is single line comment ```
+
+Multi line comment: 
+```java
+ /*
+this
+    is
+        multline
+                comment
+*/ 
+```
+Documentation comment: 
+``` java
+/**  
+* 
+*We can use various tags to depict the parameter 
+*or heading or author name 
+*We can also use HTML tags   
+* 
+*/  
+````
+You have learned to setup ***jdk*** and ***IDE*** ( IntellijIdea) in [previous section](https://unlockprogramming.com).
 
 ### **Creating a Java Project using Intellij :**
-+ Open Intellij Idea
-+ 
++ Open Intellij Idea 
++ On the project section, go to New Project ![intellij project 01](https://user-images.githubusercontent.com/77236280/210136924-4acd047b-8266-44d9-b037-79a3fa69b564.png)
++ Select the scheme of project and set the name, location of project
++ Select java as language and intellij as build system 
++ Select the appropriate JDK you want to use. We will be using openJDK 17 which is a latest LTS version of java
+ ![new project](https://user-images.githubusercontent.com/77236280/210137042-55037179-701d-4f3a-afd5-e9bf7f399300.png)
+Our project will look like : ![project home view](https://user-images.githubusercontent.com/77236280/210137299-072d91bb-8945-4ae0-841d-2fd36457d1eb.png)
+    + All the java source code files are kept inside the src folder.
+> The Main class and main method is automatically generated due we selected Add sample code option while creating the project.
+Dont worry we will be discussing about all the other stuffs there in our comming tutorials.
 <!--more-->
