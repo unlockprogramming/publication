@@ -25,7 +25,6 @@ nvm use v17.6.0
 curl -L https://dl.google.com/go/go1.18.9.linux-amd64.tar.gz >/tmp/go1.18.9.linux-amd64.tar.gz
 tar -xf /tmp/go1.18.9.linux-amd64.tar.gz -C $HOME
 echo -e "export GOROOT=\"\$HOME/go\"" | tee -a ~/.bashrc
-echo -e "export PATH=\"\$HOME/go:\$PATH\"" | tee -a ~/.bashrc
 source ~/.profile
 go version
 ```
